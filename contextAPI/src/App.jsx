@@ -1,10 +1,11 @@
 import './App.css'
+import UserContextProvider from './context/UserContextProvider'
 
 function App() {
   return (
-    <>
-    <h1>Context API</h1>
-    </>
+    <UserContextProvider>
+      
+    </UserContextProvider>
   )
 }
 

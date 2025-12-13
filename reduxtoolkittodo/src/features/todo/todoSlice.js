@@ -25,3 +25,7 @@ export const todoSlice = createSlice({
         }, // Filter always returns TRUE values.
     }
 })
+
+export const {addTodo, removeTodo} = todoSlice.actions
+
+export default todoSlice.reducer

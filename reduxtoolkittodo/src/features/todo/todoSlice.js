@@ -1,3 +1,5 @@
+import { nanoid } from '@reduxjs/toolkit';
+
 export {createSlice, nanoid} from '@reduxjs/toolkit'; // Nanoid is a method explicitly provided to generate unique ids
 
 const initialState = {
@@ -11,7 +13,15 @@ export const todoSlice = createSlice({
     name: 'todo',
     initialState,
     reducers: {
-        addTodo: () => {},
-        removeTodo: () => {}
+        addTodo: (state, action) => {
+            const todo = {
+                id: nanoid(),
+                text: action.payload
+            }
+            state.todos.push(todo)
+        },
+        removeTodo: (state, action) => { // State contains the current state and action contains the data.
+            state.todos = state.todos.filter((todo) => todo.id !== action.payload)
+        }, // Filter always returns TRUE values.
     }
 })

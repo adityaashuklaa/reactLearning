@@ -9,7 +9,7 @@ function AddTodo() {
 
     const addTodoHandler = (e) => {
         e.preventDefault()
-        dispatch(addTodo(input))
+        dispatch(addTodo(input)) // Dispatch uses reducers to send/store data to the store, and make changes.
         setInput('')
     }
 

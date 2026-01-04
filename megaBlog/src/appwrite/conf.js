@@ -84,7 +84,40 @@ export class Service{
         }
     }
 
-    
+    // File Upload Service
+    async uploadFile(file){
+        try {
+            return await this.bucket.createFile(
+                config.appwriteBucketId,
+                ID.unique(),
+                file
+            )
+        } catch (error) {
+            console.log("Appwrite service :: uploadFile :: error", error);
+            return false;
+        }
+    }
+
+    async deleteFile(fileID){
+        try {
+            await this.bucket.deleteFile(
+                config.appwriteBucketId,
+                fileID
+            )
+            return true;
+        } catch (error) {
+            console.log("Appwrite service :: deleteFile :: error", error);
+            return false;
+        }
+    }
+
+    getFilePreview(fileID){
+        return this.bucket.getFilePreview(
+            config.appwriteBucketId,
+            fileID
+        )
+    }
+
 }
 
 const service = new Service();
@@ -93,3 +126,4 @@ export default service;
 
 // We've created service using new method, just to create object out of the service so that we can extract values from the object. We've created service using NEW method, so we've to also create constructor for it. 
 // Account should be created when the constructor is being called.
+// Usually we make mistakes while uploading file, we just give the filename, that is incorrect, we have to completely give the file blobs.

@@ -55,6 +55,36 @@ export class Service{
             return false;
         }
     }
+
+    async getPost(slug){
+        try {
+            return await this.databases.getDocument(
+                config.appwriteDatabaseId,
+                config.appwriteCollectionId,
+                slug
+            )
+        } catch (error) {
+            console.log("Appwrite service :: getPost :: error", error);
+            return false;
+        }
+    }
+
+    async getPosts(queries = [Query.equal("status", "active")]){
+        try {
+            return await this.databases.listDocuments(
+                config.appwriteDatabaseId,
+                config.appwriteCollectionId,
+                queries,
+                // 100, For pagination
+                // 0, For pagination
+            )
+        } catch (error) {
+            console.log("Appwrite service :: getPosts :: error", error);
+            return false;
+        }
+    }
+
+    
 }
 
 const service = new Service();

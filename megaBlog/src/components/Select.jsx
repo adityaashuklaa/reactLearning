@@ -4,7 +4,7 @@ function Select({
     options,
     label,
     className,
-    ...props
+    ...props // all other props are being spread over here.
 }, ref) {
     const id = useId()
   return (

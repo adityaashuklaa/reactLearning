@@ -28,4 +28,4 @@ function Select({
 
 export default React.forwardRef(Select)
 
-// options? => this syntax is used for safety check, cause if this is not being used then error will be occured if there are no options available.
+// options? => this syntax is used for safety check, cause if this is not being used then error will be occured if there are no options available. 

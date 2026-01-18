@@ -121,4 +121,4 @@ export default function PostForm({ post }) {
     );
 }
 
-//
+// useForm gives you many information, and then it depends on you what you want to use, we've already used, register and handleSubmit, it also provides watch which helps to watch the form, and setValue which lets you set value in the form. If you want control of any form then control is also being provided by useForm.

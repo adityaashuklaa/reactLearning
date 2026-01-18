@@ -19,7 +19,7 @@ function Login() {
             if (session) {
                 const userData = await authService.getCurrentUser()
                 if(userData) dispatch(authLogin(userData));
-                navigate("/")
+                navigate("/") // navigate is used to navigate without using a click.
             }
         } catch (error) {
             setError(error.message)

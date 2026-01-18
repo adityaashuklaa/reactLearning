@@ -31,3 +31,4 @@ export default function Protected({children, authentication = true}) {
 }
 
 // This component is a mechanism on how pages and layouts are being protected. It is a protected container.
+// It is not necessary that filename and function name should be same, it's just an coding pedagogy, not mandatory.

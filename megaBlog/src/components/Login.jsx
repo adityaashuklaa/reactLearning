@@ -53,7 +53,7 @@ function Login() {
                 label="Email: "
                 placeholder="Enter your email"
                 type="email"
-                {...register("email", {
+                {...register("email", { // if the register is not being spread then whenever you will be calling it inside the input that particular input will be overriding the previous input value.
                     required: true,
                     validate: {
                         matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||

@@ -19,5 +19,6 @@ function PostCard({$id, title, featuredImage}) {
   )
 }
 
-
 export default PostCard 
+
+// Link in react acts like a anchor, and certainely you don't have to pass href to it, it expects to attribute, which takes you to the particular page whatever value is being passed to it.

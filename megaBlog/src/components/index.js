@@ -1,6 +1,8 @@
 import Container from "./container/Container";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
+import Select from "./Select"
+import LogoutBtn from "../components/Header/LogoutBtn"
 import Logo from "./Logo";
 import Button from "./Button";
 import Input from "./Input";
@@ -23,5 +25,7 @@ export {
     Login,
     PostForm,
     PostCard,
-    AuthLayout
+    AuthLayout,
+    LogoutBtn,
+    Select
 }

@@ -43,3 +43,4 @@ export default App
 // There are two ways to import any component in react application, common.js and module js. 
 // using import is a type of module js import which is asynchonorous in nature, and the other method is require, which is synchonorous in nature.
 // require syntax is used for common js, and import is used for module js.
+// USing import in react will throw an error, which can be fixed by defining the type of js file which is module in the package.json file.

@@ -42,3 +42,5 @@ const port = process.env.port || 3000; // This states if there is an env file th
 app.listen(port, () => {
     console.log(`App is serving at http://localhost:${port}`);
 })
+
+// npm create vite@latest . syntax for creating file inside a desired folder.

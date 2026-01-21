@@ -6,7 +6,7 @@ const app = express();
 //     res.send('Server is ready!')
 // })
 
-app.get('/jokes', (req, res) => {
+app.get('/api/jokes', (req, res) => { // standardisation of url.
     const jokes = [
         {
             id: 1,
